@@ -17,7 +17,7 @@ provisioner "remote-exec" {
     host = self.public_ip
   }
   inline = [
-    "pip3.11 install ansible",
+    " Sudo pip3.11 install ansible",
     "ansible-pull -i localhost, -u https://github.com/jagan81/roboshop-ansible.git roboshop.yml -e component_name=frontend -e env=dev,"
   ]
     }
