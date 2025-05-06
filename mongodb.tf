@@ -8,19 +8,19 @@ resource "aws_instance" "mongodb" {
   }
 
 
-  provisioner "remote-exec" {
-
-    connection {
-      type = "ssh"
-      user = "ec2-user"
-      password = "DevOps321"
-      host = self.public_ip
-    }
-    inline = [
-      "Sudo pip3.11 install ansible",
-      "ansible-pull -i localhost, -u https://github.com/jagan81/roboshop-ansible roboshop.yml -e component_name=mongodb -e env=dev,"
-    ]
-  }
+  # provisioner "remote-exec" {
+  #
+  #   connection {
+  #     type = "ssh"
+  #     user = "ec2-user"
+  #     password = "DevOps321"
+  #     host = self.public_ip
+  #   }
+  #   inline = [
+  #     "Sudo pip3.11 install ansible",
+  #     "ansible-pull -i localhost, -u https://github.com/jagan81/roboshop-ansible roboshop.yml -e component_name=mongodb -e env=dev,"
+  #   ]
+  # }
 }
 
 resource "aws_route53_record" "mongodb" {
