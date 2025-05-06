@@ -8,7 +8,6 @@ resource "aws_instance" "catalogue" {
   }
 }
 
-
 resource "aws_route53_record" "catalogue" {
   zone_id = "Z0388353395L515P1D630"
   name = "catalogue-dev"

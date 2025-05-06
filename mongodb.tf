@@ -8,7 +8,6 @@ resource "aws_instance" "mongodb" {
   }
 }
 
-
 resource "aws_route53_record" "mongodb" {
   zone_id = "Z0388353395L515P1D630"
   name = "mongodb-dev"

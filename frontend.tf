@@ -9,7 +9,6 @@ resource "aws_instance" "frontend" {
 }
 
 
-
 resource "aws_route53_record" "frontend" {
   zone_id = "Z0388353395L515P1D630"
   name = "frontend-dev"
