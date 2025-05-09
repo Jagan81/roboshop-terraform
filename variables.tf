@@ -9,3 +9,11 @@ variable "instance_type" {
  variable "vpc_security_group_ids" {
    default = ["sg-04164efe3462b5107"]
  }
+
+variable "instances" {
+  default = [
+    "catalogue",
+    "frontend",
+    "mongodb"
+  ]
+}
