@@ -17,3 +17,11 @@ variable "instances" {
     "mongodb"
   ]
 }
+
+variable "zone_id" {
+  default = "Z0388353395L515P1D630"
+}
+
+variable "env" {
+  default = "dev"
+}
