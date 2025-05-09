@@ -12,9 +12,18 @@ variable "instance_type" {
 
 variable "instances" {
   default = {
-    mongodb = "null"
-    catalogue = "null"
-    frontend = "null"
+    mongodb = {
+    ami_id =  "ami-09c813fb71547fc4f"
+    instance_type = "t3.small"
+    }
+    catalogue = {
+      ami_id =  "ami-09c813fb71547fc4f"
+      instance_type = "t3.micro"
+    }
+    frontend = {
+      ami_id =  "ami-09c813fb71547fc4f"
+      instance_type = "t3.micro"
+    }
   }
 }
 
