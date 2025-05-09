@@ -12,9 +12,9 @@ variable "instance_type" {
 
 variable "instances" {
   default = {
-    mongodb = null
-    catalogue = null
-    frontend = null
+    mongodb = "null"
+    catalogue = "null"
+    frontend = "null"
   }
 }
 
