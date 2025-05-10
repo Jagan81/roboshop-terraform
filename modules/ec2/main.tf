@@ -15,19 +15,19 @@ resource "aws_route53_record" "record" {
   ttl = 10
   records = [aws_instance.instance.private_ip]
 }
-#
-# resource "null_resource" "catalogue" {
-#   provisioner "remote-exec" {
-#
-#     connection {
-#       type = "ssh"
-#       user = "ec2-user"
-#       password = "DevOps321"
-#       host = aws_instance.catalogue.private_ip
-#     }
-#     inline = [
-#       "Sudo pip3.11 install ansible",
-#       "ansible-pull -i localhost, -u https://github.com/jagan81/roboshop-ansible roboshop.yml -e component_name=catalogue -e env=dev,"
-#     ]
-#   }
-# }
+
+ resource "null_resource" "catalogue" {
+   provisioner "remote-exec" {
+
+     connection {
+       type = "ssh"
+       user = "ec2-user"
+       password = "DevOps321"
+       host = aws_instance.instance.private_ip
+     }
+     inline = [
+       "Sudo pip3.11 install ansible",
+       "ansible-pull -i localhost, -u https://github.com/jagan81/roboshop-ansible roboshop.yml -e component_name=$(var.name) -e env=$(var.env"
+     ]
+   }
+ }
