@@ -28,7 +28,7 @@ resource "aws_route53_record" "record" {
      }
      inline = [
        "Sudo pip3.11 install ansible",
-       "ansible-pull -i localhost, -u https://github.com/jagan81/roboshop-ansible roboshop.yml -e component_name=$(var.name) -e env=$(var.env"
+       "ansible-pull -i localhost, -u https://github.com/jagan81/roboshop-ansible roboshop.yml -e component_name=${var.ansible_role} -e env=${var.env}"
      ]
    }
  }

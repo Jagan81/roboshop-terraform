@@ -8,4 +8,5 @@ module "ec2" {
   name = each.key
   vpc_security_group_ids = var.vpc_security_group_ids
   zone_id = var.zone_id
+  ansible_role = lookup(each.value,"ansible_role", each.key)
 }
