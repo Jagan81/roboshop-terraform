@@ -58,3 +58,10 @@ instances = {
 zone_id = "Z0388353395L515P1D630"
 vpc_security_group_ids = ["sg-04164efe3462b5107"]
 env = "dev"
+
+eks = {
+ main = {
+   subnets = [ "subnet-03c2c66a0914187ce", "subnet-0f1d94be8a09185ce"]
+   eks_version = 1.32
+ }
+}

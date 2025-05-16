@@ -6,3 +6,5 @@ variable "instances" {}
 variable "zone_id" {}
 
 variable "env" {}
+
+ variable "eks" {}
